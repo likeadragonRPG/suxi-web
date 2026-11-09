@@ -1,0 +1,182 @@
+/* 速喜科技 SUXI AI — 穩重顧問風（2026-11-09 定案 C）。深藍底＋白內容區，褪朱只當重點 */
+:root {
+  --navy: #17202A;       /* 深底 */
+  --navy-2: #212C38;     /* 深底卡片 */
+  --navy-3: #10171F;     /* 頁尾 */
+  --navy-line: #34414F;
+  --on-navy: #F2F0EB;
+  --on-navy-soft: #AEB6C0;
+  --paper: #F6F5F2;      /* 淺底 */
+  --white: #FFFFFF;
+  --ink: #1B2129;
+  --ink-soft: #4A535E;
+  --line: #DCDAD4;
+  --shu: #A94632;        /* 褪朱，沿用 logo */
+  --shu-bright: #C9644D; /* 深底朱 */
+
+  --sans: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --gutter: clamp(16px, 5vw, 64px);
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.8;
+}
+html[lang="en"] body { line-height: 1.65; }
+img { display: block; max-width: 100%; }
+p, h1, h2, h3, ol, ul { margin: 0; }
+a { color: inherit; }
+
+/* ---------- 頁首 ---------- */
+.site-header {
+  background: var(--navy);
+  border-bottom: 1px solid var(--navy-line);
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 14px max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
+}
+.brand img { height: 52px; width: auto; }
+.nav { display: flex; align-items: center; flex-wrap: wrap; gap: 4px clamp(18px, 3vw, 36px); font-size: 17px; font-weight: 500; }
+.nav a { text-decoration: none; color: var(--on-navy-soft); padding: 6px 0; border-bottom: 2px solid transparent; }
+.nav a:hover { color: var(--on-navy); }
+.nav a[aria-current="page"] { color: var(--on-navy); border-bottom-color: var(--shu-bright); }
+.nav .lang { font-size: 15px; border: 1px solid var(--navy-line); border-radius: 4px; padding: 2px 12px; }
+.nav .lang:hover { border-color: var(--on-navy-soft); }
+
+/* ---------- 共用 ---------- */
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+section { padding: clamp(64px, 10vw, 112px) 0; }
+/* 白底與淺底交錯 */
+main > section:nth-of-type(odd):not(:first-of-type):not(.cta) { background: var(--white); }
+
+h1, h2, h3 { font-weight: 700; }
+.page-title {
+  font-size: clamp(30px, 5vw, 54px); font-weight: 900;
+  line-height: 1.4; letter-spacing: .02em;
+  max-width: 18em;
+}
+html[lang="en"] .page-title { line-height: 1.2; letter-spacing: 0; max-width: 24em; font-size: clamp(28px, 4.4vw, 48px); }
+.lead { font-size: clamp(18px, 2vw, 21px); max-width: 32em; margin-top: 28px; }
+
+.section-title {
+  font-size: clamp(26px, 3.4vw, 36px); font-weight: 900; line-height: 1.4;
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+.btn {
+  display: inline-block; text-decoration: none;
+  font-size: 18px; font-weight: 700; line-height: 1.5;
+  background: var(--shu); color: #fff;
+  padding: 18px 32px; border-radius: 4px;
+  transition: background .2s;
+}
+.btn:hover { background: var(--shu-bright); }
+.btn small { display: block; font-size: 15px; font-weight: 400; opacity: .85; margin-top: 2px; }
+.more { display: inline-block; font-weight: 700; color: var(--shu); text-decoration: none; border-bottom: 2px solid currentColor; }
+
+/* ---------- 每頁第一段：深底標題區 ---------- */
+main > section:first-of-type { background: var(--navy); color: var(--on-navy); }
+main > section:first-of-type .lead { color: var(--on-navy-soft); }
+
+/* ---------- 首頁：首屏 ---------- */
+.hero { padding: clamp(56px, 10vw, 120px) 0 clamp(64px, 10vw, 128px); }
+.hero .sub { font-size: 15px; font-weight: 700; letter-spacing: .16em; color: var(--shu-bright); margin-bottom: 20px; }
+.hero .btn { margin-top: 40px; }
+
+/* 三個重點 */
+.points { background: var(--navy-2); color: var(--on-navy); }
+.points ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.points li { padding: 28px 24px; border-left: 1px solid var(--navy-line); font-size: 18px; font-weight: 500; }
+.points li:first-child { border-left: 0; padding-left: 0; }
+.points b { display: block; font-size: 15px; font-weight: 700; color: var(--shu-bright); letter-spacing: .1em; margin-bottom: 4px; }
+
+/* ---------- 首頁：駐廠節奏 ---------- */
+.rhythm { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.rhythm li { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--navy); border-radius: 4px; padding: 32px 28px; }
+.rhythm .when { font-size: 15px; font-weight: 700; color: var(--shu); letter-spacing: .1em; }
+.rhythm h3 { font-size: 23px; margin: 8px 0 14px; line-height: 1.45; }
+.rhythm p:not(.when) { color: var(--ink-soft); }
+
+/* ---------- 給誰看 ---------- */
+.audience { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.audience li { border-left: 4px solid var(--shu); padding: 4px 0 4px 24px; font-size: 20px; font-weight: 500; }
+
+/* ---------- 服務卡（首頁摘要） ---------- */
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.pair article { background: var(--white); border-radius: 4px; padding: 36px 32px; }
+.pair h3 { font-size: 24px; margin-bottom: 10px; }
+.pair p { color: var(--ink-soft); }
+.pair + .more { margin-top: 32px; }
+
+/* ---------- 服務頁 ---------- */
+.service + .service { margin-top: clamp(56px, 8vw, 88px); }
+.service h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 900; margin-bottom: 10px; }
+.service > p { color: var(--ink-soft); max-width: 36em; }
+.steps { list-style: none; padding: 0; margin-top: 32px; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); counter-reset: s; }
+.steps li { counter-increment: s; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--navy); border-radius: 4px; padding: 26px 24px; }
+.steps li::before { content: counter(s, decimal-leading-zero); display: block; font-size: 15px; font-weight: 700; color: var(--shu); letter-spacing: .1em; margin-bottom: 4px; }
+.steps h3 { font-size: 21px; margin-bottom: 8px; line-height: 1.45; }
+.steps p { color: var(--ink-soft); }
+
+/* ---------- 關於頁 ---------- */
+.people { list-style: none; padding: 0; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.people li { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--navy); border-radius: 4px; padding: 32px 28px; }
+.people h3 { font-size: 26px; }
+.people .role { font-size: 15px; font-weight: 700; letter-spacing: .1em; color: var(--shu); margin-bottom: 12px; }
+.people p:not(.role) { color: var(--ink-soft); }
+
+/* ---------- CTA 區（深底） ---------- */
+.cta { background: var(--navy); color: var(--on-navy); }
+.cta h2 { font-size: clamp(26px, 3.6vw, 40px); font-weight: 900; line-height: 1.45; max-width: 20em; }
+html[lang="en"] .cta h2 { line-height: 1.25; }
+.cta p { color: var(--on-navy-soft); margin-top: 16px; }
+.cta .mail {
+  display: inline-block; margin-top: 32px;
+  font-size: 20px; font-weight: 700; text-decoration: none;
+  background: var(--shu); color: #fff;
+  padding: 16px 32px; border-radius: 4px;
+  transition: background .2s;
+  overflow-wrap: anywhere;
+}
+.cta .mail:hover { background: var(--shu-bright); }
+
+/* ---------- 聯絡頁 ---------- */
+.mail-big {
+  display: inline-block; margin-top: 36px;
+  font-size: clamp(22px, 4vw, 34px); font-weight: 700;
+  text-decoration: none; color: #fff;
+  background: var(--shu); padding: 16px 32px; border-radius: 4px;
+  overflow-wrap: anywhere;
+  transition: background .2s;
+}
+.mail-big:hover { background: var(--shu-bright); }
+.checklist { list-style: none; padding: 0; display: grid; gap: 16px; max-width: 34em; }
+.checklist li { border-left: 4px solid var(--shu); padding: 2px 0 2px 20px; font-size: 20px; font-weight: 500; }
+.note { color: var(--ink-soft); margin-top: 32px; }
+
+/* ---------- 頁尾 ---------- */
+.site-footer {
+  background: var(--navy-3); color: var(--on-navy-soft);
+  padding: 40px max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  font-size: 15px;
+}
+.site-footer img { height: 44px; width: auto; }
+.site-footer p { text-align: right; }
+.site-footer a { color: var(--on-navy); }
+@media (max-width: 560px) { .site-footer p { text-align: left; } }
+
+/* ---------- 手機 ---------- */
+@media (max-width: 760px) {
+  .points ul, .rhythm, .audience, .pair { grid-template-columns: 1fr; }
+  .points li { border-left: 0; border-top: 1px solid var(--navy-line); padding: 18px 0; }
+  .points li:first-child { border-top: 0; }
+  .btn, .cta .mail, .mail-big { display: block; text-align: center; }
+}

@@ -1,0 +1,34 @@
+# 速喜科技 SUXI AI
+# 歡迎一般搜尋引擎與 AI 搜尋／助理的爬蟲讀取全站。
+
+User-agent: *
+Allow: /
+
+# OpenAI（ChatGPT 搜尋、使用者點連結）
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic（Claude）
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini
+User-agent: Google-Extended
+Allow: /
+
+# 網址確定後，跑 tools/make-sitemap.py 會自動補上這行
+# Sitemap:

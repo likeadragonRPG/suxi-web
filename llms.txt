@@ -1,0 +1,25 @@
+# 速喜科技有限公司（SUXI AI）
+
+> 速喜科技進傳產現場，把 AI 接進正在跑的舊系統，讓它真正用起來，不是只交一份報告。
+> SUXI AI works on the factory floor, connecting AI to the legacy systems manufacturers already run, so it actually gets used — not just a report.
+
+速喜科技有限公司由 Fred（共同創辦人・CEO）與 Gavin（共同創辦人・CTO）共同創辦。
+服務對象：傳統產業的老闆，以及需要有人進廠、對上舊系統的廠務、生管、品保主管。
+聯絡方式：suxi.ai@gmail.com
+
+## 服務 Services
+
+- [服務](services/)：兩項服務。現場系統導入：看現況、選一個痛點先做、上線到現場會用、留下系統和教練。政府補助申請協助：案子適合時協助準備申請文件，是否通過由審查單位決定。
+- [Services (English)](en/services/): On-site system implementation, and government subsidy application support.
+
+## 合作方式 How we work
+
+- [首頁](./)：進廠前先對齊一個痛點；進廠後人到現場、接上舊系統，不推倒重來；離開時留下現場會用的系統、操作方式與交接。
+- [Home (English)](en/)
+
+## 公司 Company
+
+- [關於](about/)：公司與創辦人。
+- [About (English)](en/about/)
+- [聯絡](contact/)：帶一個產線痛點來，我們告訴你能不能做。
+- [Contact (English)](en/contact/)
