@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About | SUXI AI</title>
 <meta name="description" content="速喜科技有限公司 (SUXI AI) was co-founded by Fred and Gavin to bring AI onto traditional factory floors.">
-<meta name="theme-color" content="#17202A">
+<meta name="theme-color" content="#FBFAF8">
 <link rel="icon" href="../../assets/favicon.ico" sizes="48x48">
 <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../style.css">
 <script type="application/ld+json">
 {
@@ -26,56 +26,75 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="a-right" viewBox="0 0 44 44"><path d="M5 22H38M24 8L38 22L24 36"/></symbol>
+  <symbol id="a-up" viewBox="0 0 44 44"><path d="M22 39V6M8 20L22 6L36 20"/></symbol>
+  <symbol id="a-left" viewBox="0 0 44 44"><path d="M39 22H6M20 8L6 22L20 36"/></symbol>
+</svg>
+
 <header class="site-header">
-  <a href="../" class="brand"><img src="../../assets/suxi-horizontal-bi-on-dark.svg" alt="SUXI AI 速喜科技" width="152" height="88"></a>
-  <nav class="nav" aria-label="Main">
-    <a href="../">Home</a>
-    <a href="../services/">Services</a>
-    <a href="./" aria-current="page">About</a>
-    <a href="../contact/">Contact</a>
-    <a href="../../about/" class="lang" lang="zh-Hant-TW" hreflang="zh-Hant-TW">中文</a>
-  </nav>
+  <div class="wrap">
+    <a href="../" class="brand"><img src="../../assets/suxi-horizontal-bi.svg" alt="SUXI AI 速喜科技" width="86" height="50"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../">Home</a>
+      <a href="../services/">Services</a>
+      <a href="./" aria-current="page">About</a>
+      <a href="../contact/">Contact</a>
+      <a href="../../about/" lang="zh-Hant-TW" hreflang="zh-Hant-TW">中文</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-
-  <section>
+  <section class="page-head">
     <div class="wrap">
       <h1 class="page-title">速喜科技有限公司 (SUXI AI) was co-founded by Fred and Gavin to bring AI onto traditional factory floors.</h1>
       <p class="lead">How we work is simple: go on site, and finish the job.</p>
     </div>
   </section>
 
-  <section>
+  <section class="wall">
     <div class="wrap">
-      <h2 class="section-title">Founders</h2>
-      <ul class="people">
-        <li>
+      <div class="head">
+        <h2>Founders<span class="seal">.</span></h2>
+        <p class="en">創辦人</p>
+      </div>
+      <ul class="plates two">
+        <li class="plate">
+          <div class="plate-top"><span class="num">01</span></div>
           <h3>Fred</h3>
-          <p class="role">Co-founder · CEO</p>
+          <p class="en">Co-founder · CEO</p>
           <p>The one who goes on site and gets problems solved. Fred aligns on the pain point with each plant and leads projects until the floor is using them.</p>
         </li>
-        <li>
+        <li class="plate">
+          <div class="plate-top"><span class="num">02</span></div>
           <h3>Gavin</h3>
-          <p class="role">Co-founder · CTO</p>
+          <p class="en">Co-founder · CTO</p>
           <p>Owns the system architecture — connecting AI to the legacy systems already running on the floor.</p>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="cta">
+  <section class="wall closing">
     <div class="wrap">
-      <h2>Bring us one problem from your line. We'll tell you if we can fix it.</h2>
-      <a class="mail" href="mailto:suxi.ai@gmail.com">suxi.ai@gmail.com</a>
+      <div class="plate">
+        <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
+        <div>
+          <h2><span>Bring us one problem from your line.</span><span>We'll tell you if we can fix it<span class="seal" style="display:inline">.</span></span></h2>
+          <a class="btn" href="mailto:suxi.ai@gmail.com">Email us</a>
+          <span class="mailnote">suxi.ai@gmail.com</span>
+        </div>
+      </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
-  <img src="../../assets/suxi-horizontal-bi-on-dark.svg" alt="SUXI AI 速喜科技" width="138" height="80">
-  <p>速喜科技有限公司 (SUXI AI)<br><a href="mailto:suxi.ai@gmail.com">suxi.ai@gmail.com</a></p>
+  <div class="wrap">
+    <img src="../../assets/suxi-horizontal-bi.svg" alt="SUXI AI 速喜科技" width="69" height="40">
+    <p>速喜科技有限公司 (SUXI AI)　<a href="mailto:suxi.ai@gmail.com">suxi.ai@gmail.com</a></p>
+  </div>
 </footer>
 
 </body>

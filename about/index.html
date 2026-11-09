@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>關於｜速喜科技 SUXI AI</title>
 <meta name="description" content="速喜科技有限公司由 Fred 與 Gavin 共同創辦，專做傳產現場的 AI 導入。">
-<meta name="theme-color" content="#17202A">
+<meta name="theme-color" content="#FBFAF8">
 <link rel="icon" href="../assets/favicon.ico" sizes="48x48">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
 {
@@ -26,56 +26,75 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="a-right" viewBox="0 0 44 44"><path d="M5 22H38M24 8L38 22L24 36"/></symbol>
+  <symbol id="a-up" viewBox="0 0 44 44"><path d="M22 39V6M8 20L22 6L36 20"/></symbol>
+  <symbol id="a-left" viewBox="0 0 44 44"><path d="M39 22H6M20 8L6 22L20 36"/></symbol>
+</svg>
+
 <header class="site-header">
-  <a href="../" class="brand"><img src="../assets/suxi-horizontal-bi-on-dark.svg" alt="速喜科技 SUXI AI" width="152" height="88"></a>
-  <nav class="nav" aria-label="主選單">
-    <a href="../">首頁</a>
-    <a href="../services/">服務</a>
-    <a href="./" aria-current="page">關於</a>
-    <a href="../contact/">聯絡</a>
-    <a href="../en/about/" class="lang" lang="en" hreflang="en">EN</a>
-  </nav>
+  <div class="wrap">
+    <a href="../" class="brand"><img src="../assets/suxi-horizontal-bi.svg" alt="速喜科技 SUXI AI" width="86" height="50"></a>
+    <nav class="nav" aria-label="主選單">
+      <a href="../">首頁</a>
+      <a href="../services/">服務</a>
+      <a href="./" aria-current="page">關於</a>
+      <a href="../contact/">聯絡</a>
+      <a href="../en/about/" lang="en" hreflang="en">EN</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-
-  <section>
+  <section class="page-head">
     <div class="wrap">
       <h1 class="page-title">速喜科技有限公司由 Fred 與 Gavin 共同創辦，專做傳產現場的 AI 導入。</h1>
       <p class="lead">我們的做法很簡單：進現場，把問題做完。</p>
     </div>
   </section>
 
-  <section>
+  <section class="wall">
     <div class="wrap">
-      <h2 class="section-title">創辦人</h2>
-      <ul class="people">
-        <li>
+      <div class="head">
+        <h2>創辦人<span class="seal">。</span></h2>
+        <p class="en">Founders</p>
+      </div>
+      <ul class="plates two">
+        <li class="plate">
+          <div class="plate-top"><span class="num">01</span></div>
           <h3>Fred</h3>
-          <p class="role">共同創辦人・CEO</p>
+          <p class="en">Co-founder · CEO</p>
           <p>進現場、把問題做完的人。負責進廠對齊痛點，帶專案做到現場會用。</p>
         </li>
-        <li>
+        <li class="plate">
+          <div class="plate-top"><span class="num">02</span></div>
           <h3>Gavin</h3>
-          <p class="role">共同創辦人・CTO</p>
+          <p class="en">Co-founder · CTO</p>
           <p>負責系統架構，把 AI 接上現場的舊系統。</p>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="cta">
+  <section class="wall closing">
     <div class="wrap">
-      <h2>帶一個產線痛點來，我們告訴你能不能做。</h2>
-      <a class="mail" href="mailto:suxi.ai@gmail.com">suxi.ai@gmail.com</a>
+      <div class="plate">
+        <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
+        <div>
+          <h2><span>帶一個產線痛點來，</span><span>我們告訴你能不能做<span class="seal" style="display:inline">。</span></span></h2>
+          <a class="btn" href="mailto:suxi.ai@gmail.com">寄信給我們</a>
+          <span class="mailnote">suxi.ai@gmail.com</span>
+        </div>
+      </div>
     </div>
   </section>
-
 </main>
 
 <footer class="site-footer">
-  <img src="../assets/suxi-horizontal-bi-on-dark.svg" alt="速喜科技 SUXI AI" width="138" height="80">
-  <p>速喜科技有限公司<br><a href="mailto:suxi.ai@gmail.com">suxi.ai@gmail.com</a></p>
+  <div class="wrap">
+    <img src="../assets/suxi-horizontal-bi.svg" alt="速喜科技 SUXI AI" width="69" height="40">
+    <p>速喜科技有限公司　<a href="mailto:suxi.ai@gmail.com">suxi.ai@gmail.com</a></p>
+  </div>
 </footer>
 
 </body>
