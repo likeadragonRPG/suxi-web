@@ -1,0 +1,152 @@
+/* 速喜科技 SUXI AI — 導視系統風（2026-11-10 定案 D6）
+   參考：嘉義市立美術館視覺識別與導視（莊濟寰）。
+   一種黑體、兩種粗細；褐墨＋淺灰牆面；箭頭、方框數字、細橫線；中英雙語；朱色只留句號 */
+:root {
+  --white: #FBFAF8;
+  --wall: #DCDAD5;        /* 導視牆 */
+  --plate: #F6F5F2;       /* 導視牌 */
+  --ink: #3A342D;         /* 褐墨，內文 */
+  --ink-soft: #6F6558;    /* 次要文字 */
+  --rule: #BDB7AC;        /* 細線 */
+  --shu: #A94632;         /* 褪朱，沿用 logo */
+  --sans: "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --gutter: clamp(20px, 6vw, 96px);
+  --max: 1160px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); font-weight: 400; font-size: 18px; line-height: 1.85; }
+html[lang="en"] body { line-height: 1.65; }
+p, h1, h2, h3, ol, ul { margin: 0; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+b, h1, h2, h3 { font-weight: 700; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.seal { color: var(--shu); }
+.en { font-size: 15px; line-height: 1.5; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+.arrow { width: 44px; height: 44px; flex: none; fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: square; stroke-linejoin: miter; }
+
+/* ---------- 頁首 ---------- */
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-top: 28px; padding-bottom: 28px; }
+.brand img { height: 50px; width: auto; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px clamp(20px, 3vw, 40px); font-size: 18px; }
+.nav a { text-decoration: none; color: var(--ink-soft); padding: 4px 0; }
+.nav a:hover { color: var(--ink); }
+.nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+
+/* ---------- 首屏（首頁） ---------- */
+.hero { padding: clamp(64px, 11vw, 144px) 0 clamp(72px, 11vw, 144px); }
+.display { font-weight: 700; font-size: clamp(40px, 10.5vw, 120px); line-height: 1.3; }
+.display span { display: block; }
+html[lang="en"] .display { font-size: clamp(36px, 8.4vw, 104px); line-height: 1.2; }
+.hero-text { max-width: 36em; margin-top: clamp(48px, 7vw, 88px); }
+.hero h1 { font-size: 22px; line-height: 1.8; text-wrap: balance; }
+html[lang="en"] .hero h1 { line-height: 1.6; }
+.hero .lead { color: var(--ink-soft); margin-top: 20px; }
+
+.btn { display: inline-block; margin-top: 40px; text-decoration: none; background: var(--ink); color: var(--white); font-size: 18px; font-weight: 700; line-height: 1.5;
+  padding: 18px 32px; border-radius: 2px; transition: background .2s; }
+.btn:hover { background: var(--shu); }
+.mailnote { display: block; margin-top: 14px; font-size: 15px; color: var(--ink-soft); }
+
+/* ---------- 子頁標題 ---------- */
+.page-head { padding: clamp(56px, 9vw, 112px) 0 clamp(48px, 7vw, 88px); }
+.page-title { font-size: clamp(28px, 4.6vw, 52px); font-weight: 700; line-height: 1.45; max-width: 20em; text-wrap: balance; }
+html[lang="en"] .page-title { line-height: 1.25; max-width: 22em; }
+.page-head .lead { color: var(--ink-soft); font-size: clamp(18px, 2vw, 21px); margin-top: 20px; max-width: 32em; }
+
+/* ---------- 導視牆與導視牌 ---------- */
+.wall { background: var(--wall); padding: clamp(64px, 9vw, 120px) 0; }
+.wall + .wall { padding-top: 0; }
+.head { margin-bottom: clamp(32px, 5vw, 56px); }
+.head h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.5; }
+html[lang="en"] .head h2 { line-height: 1.3; }
+.head .en { margin-top: 4px; }
+.head .intro { color: var(--ink-soft); margin-top: 16px; max-width: 36em; }
+
+.plates { list-style: none; padding: 0; display: grid; gap: clamp(16px, 2vw, 24px); }
+.plates.two { grid-template-columns: repeat(2, 1fr); }
+.plates.three { grid-template-columns: repeat(3, 1fr); }
+.plates.four { grid-template-columns: repeat(4, 1fr); }
+.plate { background: var(--plate); padding: clamp(24px, 3vw, 36px); }
+.plate-top { display: flex; align-items: flex-start; justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--rule); }
+.num { font-size: clamp(44px, 5vw, 64px); line-height: 1; letter-spacing: .02em; color: var(--ink); }
+.plate h3 { font-size: 26px; line-height: 1.4; margin-top: 20px; }
+.plates.four .plate h3 { font-size: 22px; }
+html[lang="en"] .plate h3 { line-height: 1.3; }
+.plate .en { margin-top: 2px; }
+.plate .what { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rule); font-weight: 700; }
+html[lang="en"] .plate .what { font-size: 20px; line-height: 1.4; }
+.plate .what + p { color: var(--ink-soft); margin-top: 6px; }
+.plate > p:not(.en):not(.what) { color: var(--ink-soft); margin-top: 12px; }
+
+/* 方框數字（像展廳 1、2、3 的標示） */
+.box { width: 52px; height: 52px; flex: none; border: 3px solid var(--ink); display: grid; place-items: center; font-size: 26px; font-weight: 700; line-height: 1; }
+.svc { display: grid; grid-template-columns: auto 1fr; gap: 8px 24px; align-items: start; }
+.svc h3 { margin-top: 0; }
+.svc p:not(.en) { grid-column: 2; color: var(--ink-soft); margin-top: 12px; }
+.svc .en { grid-column: 2; margin-top: 0; }
+
+/* ---------- 細線列（寫給誰、聯絡清單） ---------- */
+.sect { padding: clamp(72px, 10vw, 128px) 0; }
+.rows { list-style: none; padding: 0; border-top: 1px solid var(--rule); }
+.rows li { display: grid; grid-template-columns: 5fr 7fr; gap: 4px 32px; padding: 24px 0; border-bottom: 1px solid var(--rule); align-items: baseline; font-size: clamp(20px, 2.2vw, 24px); }
+.rows span { color: var(--ink-soft); }
+.rows.list li { grid-template-columns: 72px 1fr; }
+.rows.list .no { color: var(--ink-soft); font-size: 15px; letter-spacing: .12em; }
+.note { color: var(--ink-soft); margin-top: 32px; }
+.more { display: inline-block; margin-top: 32px; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.more:hover { color: var(--shu); }
+
+/* ---------- 聯絡信箱大字 ---------- */
+.mail-big { display: inline-block; margin-top: 36px; font-size: clamp(22px, 4vw, 34px); font-weight: 700; text-decoration: none; color: var(--white); background: var(--ink); padding: 16px 32px; border-radius: 2px; overflow-wrap: anywhere; transition: background .2s; }
+.mail-big:hover { background: var(--shu); }
+
+/* ---------- 結尾導視牌 ---------- */
+.closing .plate { display: grid; grid-template-columns: auto 1fr; gap: 24px clamp(24px, 5vw, 64px); align-items: start; padding: clamp(32px, 5vw, 72px); }
+.closing .arrow { width: clamp(48px, 6vw, 80px); height: clamp(48px, 6vw, 80px); }
+.closing h2 { font-size: clamp(26px, 4.6vw, 56px); line-height: 1.4; }
+html[lang="en"] .closing h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 1.3; }
+.closing h2 span { display: block; text-wrap: balance; }
+
+/* ---------- 頁尾 ---------- */
+.site-footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-top: 40px; padding-bottom: 48px; font-size: 15px; color: var(--ink-soft); }
+.site-footer img { height: 40px; width: auto; }
+
+/* ---------- 手機 ---------- */
+@media (max-width: 1000px) {
+  .plates.four { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .plates.two, .plates.three, .plates.four { grid-template-columns: 1fr; }
+  .rows li, .rows.list li { grid-template-columns: 1fr; }
+  .closing .plate { grid-template-columns: 1fr; }
+  .btn { display: block; text-align: center; }
+  .display { font-size: 13.2vw; }
+  html[lang="en"] .display { font-size: 10vw; }
+  .nav { gap: 4px 18px; font-size: 17px; }
+}
+
+/* ---------- 2026-11-25 補：三項服務、本地 AI、FAQ、人物照片位 ---------- */
+.svc-head { display: grid; grid-template-columns: auto 1fr; gap: 8px 24px; align-items: start; }
+.svc-head .box { margin-top: 4px; }
+.svc .ticks { grid-column: 2; }
+.ticks { list-style: none; padding: 0; margin-top: 16px; border-top: 1px solid var(--rule); }
+.ticks li { padding: 12px 0 12px 20px; border-bottom: 1px solid var(--rule); color: var(--ink-soft); position: relative; }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 1.45em; width: 10px; height: 2px; background: var(--shu); }
+.plates.flat .plate { background: var(--plate); border: 1px solid var(--rule); }
+.sect.tight { padding-top: 0; }
+.faq li { font-size: clamp(18px, 2vw, 21px); }
+.faq li span:last-child { color: var(--ink); }
+.person { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: start; }
+.person h3 { margin-top: 0; }
+.photo { aspect-ratio: 4 / 5; width: 100%; max-width: 100%; border: 1px dashed var(--rule); background: var(--white);
+  display: grid; place-items: center; text-align: center; font-size: 14px; color: var(--ink-soft); padding: 8px; }
+@media (max-width: 860px) {
+  .person { grid-template-columns: 96px 1fr; gap: 16px; }
+}
+@media (max-width: 420px) {
+  .person { grid-template-columns: 1fr; }
+  .photo { max-width: 140px; }
+}
