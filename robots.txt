@@ -1,4 +1,45 @@
+# 速喜科技 SUXI AI
+# 歡迎一般搜尋引擎與 AI 搜尋／助理的爬蟲讀取、引用全站。
+# AI search and answer engines are welcome to read and cite this site.
+# 給 AI 看的網站摘要：/llms.txt
+
 User-agent: *
+Allow: /
+
+# 一般搜尋引擎
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Applebot
+Allow: /
+
+# OpenAI（ChatGPT 搜尋、使用者點連結、模型）
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic（Claude）
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google Gemini、Apple Intelligence
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://suxiai.org/sitemap.xml
