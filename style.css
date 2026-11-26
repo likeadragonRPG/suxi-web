@@ -156,3 +156,20 @@ html[lang="en"] .closing h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 
 .particles { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 @media (max-width: 860px) { .particles { opacity: .35; } }
 @media print { .particles { display: none; } }
+
+/* ---------- 首頁服務卡：整張是連結（.go） ---------- */
+.plate.svc.go { display: block; padding: 0; }
+.go > a { display: block; height: 100%; padding: clamp(24px, 3vw, 36px); color: inherit; text-decoration: none; }
+.go .plate-top { align-items: center; transition: border-color .2s; }
+.go h3 { margin-top: 20px; }
+.go .arrow { transition: transform .2s; }
+.go > a:hover .arrow, .go > a:focus-visible .arrow { transform: translateX(6px); }
+.go > a:hover .plate-top, .go > a:focus-visible .plate-top { border-bottom-color: var(--ink); }
+.go > a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+
+/* ---------- 首頁捲動淡入（assets/reveal.js 加上 html.js 才生效） ---------- */
+.js main section .head, .js main section .plate { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+.js main section .head.is-in, .js main section .plate.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js main section .head, .js main section .plate { opacity: 1; transform: none; transition: none; }
+}
