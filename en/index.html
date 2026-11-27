@@ -31,7 +31,7 @@
 <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
 <script src="../assets/reveal.js"></script>
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
@@ -68,8 +68,6 @@
 </script>
 </head>
 <body>
-<canvas class="particles" aria-hidden="true"></canvas>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="a-right" viewBox="0 0 44 44"><path d="M5 22H38M24 8L38 22L24 36"/></symbol>
   <symbol id="a-up" viewBox="0 0 44 44"><path d="M22 39V6M8 20L22 6L36 20"/></symbol>
@@ -91,12 +89,13 @@
 
 <main>
   <section class="hero">
+    <canvas class="particles" aria-hidden="true"></canvas>
     <div class="wrap">
       <p class="display" aria-hidden="true"><span>On site.</span><span>Problem solved<span class="seal" style="display:inline">.</span></span></p>
       <div class="hero-text">
         <h1>SUXI AI works on site in traditional factories, connecting AI to the legacy systems you already run, so it actually gets used.</h1>
-        <p class="lead">Not just a report. We come to your line and connect to your work orders, reports, machines and existing systems. The goal is something your floor uses every day.</p>
-        <a class="btn" href="mailto:suxi.ai@gmail.com">Bring us one problem from your line.</a>
+        <p class="lead">Not just a report. We start from the work orders, reports and machines you have now, until your floor uses it every day.</p>
+        <a class="btn" href="mailto:suxi.ai@gmail.com">Bring us one problem from your line</a>
         <span class="mailnote">Email suxi.ai@gmail.com</span>
       </div>
     </div>
@@ -121,26 +120,35 @@
         <h2>Three things we do<span class="seal">.</span></h2>
         <p class="en">What we offer</p>
       </div>
-      <ul class="plates three">
-        <li class="plate svc go">
+      <ul class="directory">
+        <li>
           <a href="services/#connect">
-            <div class="plate-top"><span class="box">1</span><svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg></div>
-            <h3>Connect AI to legacy systems and machines</h3>
-            <p>We see how your floor runs, then connect AI to the systems, spreadsheets, work orders and machines you use now.</p>
+            <span class="box">1</span>
+            <div class="dir-name">
+              <h3>Connect AI to legacy systems and machines</h3>
+            </div>
+            <p class="dir-desc">We see how your floor runs, then connect AI to the systems, spreadsheets, work orders and machines you use now.</p>
+            <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
           </a>
         </li>
-        <li class="plate svc go">
+        <li>
           <a href="services/#local-ai">
-            <div class="plate-top"><span class="box">2</span><svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg></div>
-            <h3>Deploy local AI</h3>
-            <p>We help put models or applications inside your plant, so data that needs to stay there can be processed there.</p>
+            <span class="box">2</span>
+            <div class="dir-name">
+              <h3>Deploy local AI</h3>
+            </div>
+            <p class="dir-desc">We help put models or applications inside your plant, so data that needs to stay there can be processed there.</p>
+            <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
           </a>
         </li>
-        <li class="plate svc go">
+        <li>
           <a href="services/#agent">
-            <div class="plate-top"><span class="box">3</span><svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg></div>
-            <h3>Build AI agent workflows</h3>
-            <p>We chain repetitive tasks into a working flow, with human checks kept in place.</p>
+            <span class="box">3</span>
+            <div class="dir-name">
+              <h3>Build AI agent workflows</h3>
+            </div>
+            <p class="dir-desc">We chain repetitive tasks into a working flow, with human checks kept in place.</p>
+            <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
           </a>
         </li>
       </ul>

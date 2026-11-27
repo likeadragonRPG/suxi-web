@@ -21,10 +21,10 @@ html[lang="en"] body { line-height: 1.65; }
 p, h1, h2, h3, ol, ul { margin: 0; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
-b, h1, h2, h3 { font-weight: 700; }
+b, h1, h2, h3 { font-weight: 600; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 .seal { color: var(--shu); }
-.en { font-size: 15px; line-height: 1.5; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+.en { font-size: 15px; line-height: 1.5; letter-spacing: .02em; color: var(--ink-soft); }
 .arrow { width: 44px; height: 44px; flex: none; fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: square; stroke-linejoin: miter; }
 
 /* ---------- 頁首 ---------- */
@@ -33,11 +33,12 @@ b, h1, h2, h3 { font-weight: 700; }
 .nav { display: flex; flex-wrap: wrap; gap: 4px clamp(20px, 3vw, 40px); font-size: 18px; }
 .nav a { text-decoration: none; color: var(--ink-soft); padding: 4px 0; }
 .nav a:hover { color: var(--ink); }
-.nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+.nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 
 /* ---------- 首屏（首頁） ---------- */
-.hero { padding: clamp(64px, 11vw, 144px) 0 clamp(72px, 11vw, 144px); }
-.display { font-weight: 700; font-size: clamp(40px, 10.5vw, 120px); line-height: 1.3; }
+.hero { position: relative; padding: clamp(64px, 11vw, 144px) 0 clamp(72px, 11vw, 144px); }
+.hero .wrap { position: relative; z-index: 1; }
+.display { font-weight: 600; font-size: clamp(40px, 10.5vw, 120px); line-height: 1.3; }
 .display span { display: block; }
 html[lang="en"] .display { font-size: clamp(36px, 8.4vw, 104px); line-height: 1.2; }
 .hero-text { max-width: 36em; margin-top: clamp(48px, 7vw, 88px); }
@@ -45,10 +46,11 @@ html[lang="en"] .display { font-size: clamp(36px, 8.4vw, 104px); line-height: 1.
 html[lang="en"] .hero h1 { line-height: 1.6; }
 .hero .lead { color: var(--ink-soft); margin-top: 20px; }
 
-.btn { display: inline-block; margin-top: 40px; text-decoration: none; background: var(--ink); color: var(--white); font-size: 18px; font-weight: 700; line-height: 1.5;
-  padding: 18px 32px; border-radius: 2px; transition: background .2s; }
-.btn:hover { background: var(--shu); }
-.mailnote { display: block; margin-top: 14px; font-size: 15px; color: var(--ink-soft); }
+.btn { display: inline-block; margin-top: 40px; text-decoration: none; background: var(--ink); color: var(--white); font-size: 18px; font-weight: 600; line-height: 1.5;
+  padding: 16px 32px; border-radius: 2px; transition: background-color .2s ease-out; }
+.btn:hover { background: #231F1B; }
+.btn:active { transform: scale(.98); }
+.mailnote { display: block; margin-top: 12px; font-size: 15px; color: var(--ink-soft); }
 
 /* ---------- 子頁標題 ---------- */
 .page-head { padding: clamp(56px, 9vw, 112px) 0 clamp(48px, 7vw, 88px); }
@@ -76,13 +78,13 @@ html[lang="en"] .head h2 { line-height: 1.3; }
 .plates.four .plate h3 { font-size: 22px; }
 html[lang="en"] .plate h3 { line-height: 1.3; }
 .plate .en { margin-top: 2px; }
-.plate .what { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rule); font-weight: 700; }
+.plate .what { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rule); font-weight: 600; }
 html[lang="en"] .plate .what { font-size: 20px; line-height: 1.4; }
-.plate .what + p { color: var(--ink-soft); margin-top: 6px; }
+.plate .what + p { color: var(--ink-soft); margin-top: 8px; }
 .plate > p:not(.en):not(.what) { color: var(--ink-soft); margin-top: 12px; }
 
 /* 方框數字（像展廳 1、2、3 的標示） */
-.box { width: 52px; height: 52px; flex: none; border: 3px solid var(--ink); display: grid; place-items: center; font-size: 26px; font-weight: 700; line-height: 1; }
+.box { width: 52px; height: 52px; flex: none; border: 3px solid var(--ink); display: grid; place-items: center; font-size: 26px; font-weight: 600; line-height: 1; }
 .svc { display: grid; grid-template-columns: auto 1fr; gap: 8px 24px; align-items: start; }
 .svc h3 { margin-top: 0; }
 .svc p:not(.en) { grid-column: 2; color: var(--ink-soft); margin-top: 12px; }
@@ -94,14 +96,14 @@ html[lang="en"] .plate .what { font-size: 20px; line-height: 1.4; }
 .rows li { display: grid; grid-template-columns: 5fr 7fr; gap: 4px 32px; padding: 24px 0; border-bottom: 1px solid var(--rule); align-items: baseline; font-size: clamp(20px, 2.2vw, 24px); }
 .rows span { color: var(--ink-soft); }
 .rows.list li { grid-template-columns: 72px 1fr; }
-.rows.list .no { color: var(--ink-soft); font-size: 15px; letter-spacing: .12em; }
+.rows.list .no { color: var(--ink-soft); font-size: 15px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
 .note { color: var(--ink-soft); margin-top: 32px; }
 .more { display: inline-block; margin-top: 32px; text-underline-offset: 6px; text-decoration-thickness: 1px; }
-.more:hover { color: var(--shu); }
+.more:hover { text-decoration-thickness: 2px; }
 
 /* ---------- 聯絡信箱大字 ---------- */
-.mail-big { display: inline-block; margin-top: 36px; font-size: clamp(22px, 4vw, 34px); font-weight: 700; text-decoration: none; color: var(--white); background: var(--ink); padding: 16px 32px; border-radius: 2px; overflow-wrap: anywhere; transition: background .2s; }
-.mail-big:hover { background: var(--shu); }
+.mail-big { display: inline-block; margin-top: 36px; font-size: clamp(22px, 4vw, 34px); font-weight: 600; text-decoration: none; color: var(--white); background: var(--ink); padding: 16px 32px; border-radius: 2px; overflow-wrap: anywhere; transition: background-color .2s ease-out; }
+.mail-big:hover { background: #231F1B; }
 
 /* ---------- 結尾導視牌 ---------- */
 .closing .plate { display: grid; grid-template-columns: auto 1fr; gap: 24px clamp(24px, 5vw, 64px); align-items: start; padding: clamp(32px, 5vw, 72px); }
@@ -125,7 +127,7 @@ html[lang="en"] .closing h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 
   .btn { display: block; text-align: center; }
   .display { font-size: 13.2vw; }
   html[lang="en"] .display { font-size: 10vw; }
-  .nav { gap: 4px 18px; font-size: 17px; }
+  .nav { gap: 4px 16px; font-size: 17px; }
 }
 
 /* ---------- 2026-11-25 補：三項服務、本地 AI、FAQ、人物照片位 ---------- */
@@ -134,27 +136,22 @@ html[lang="en"] .closing h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 
 .svc .ticks { grid-column: 2; }
 .ticks { list-style: none; padding: 0; margin-top: 16px; border-top: 1px solid var(--rule); }
 .ticks li { padding: 12px 0 12px 20px; border-bottom: 1px solid var(--rule); color: var(--ink-soft); position: relative; }
-.ticks li::before { content: ""; position: absolute; left: 0; top: 1.45em; width: 10px; height: 2px; background: var(--shu); }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 1.45em; width: 10px; height: 2px; background: var(--ink); }
 .plates.flat .plate { background: var(--plate); border: 1px solid var(--rule); }
 .sect.tight { padding-top: 0; }
 .faq li { font-size: clamp(18px, 2vw, 21px); }
 .faq li span:last-child { color: var(--ink); }
-.person { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: start; }
+.person { display: block; }  /* 照片拍好後再改回兩欄：120px 1fr */
 .person h3 { margin-top: 0; }
 .photo { aspect-ratio: 4 / 5; width: 100%; max-width: 100%; border: 1px dashed var(--rule); background: var(--white);
   display: grid; place-items: center; text-align: center; font-size: 14px; color: var(--ink-soft); padding: 8px; }
-@media (max-width: 860px) {
-  .person { grid-template-columns: 96px 1fr; gap: 16px; }
-}
-@media (max-width: 420px) {
-  .person { grid-template-columns: 1fr; }
-  .photo { max-width: 140px; }
-}
 
-/* ---------- 首頁粒子背景（assets/particles.js；純裝飾） ----------
-   固定在最底層；導視牆有底色會蓋住它，只在白底區塊透出來 */
-.particles { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
-@media (max-width: 860px) { .particles { opacity: .35; } }
+/* ---------- 首頁首屏的點陣 S（assets/particles.js；純裝飾） ----------
+   2026-11-27 unslop：只在首屏右側，載入時聚合一次後靜止；寬度不夠就不顯示，不疊在文字上 */
+.particles { position: absolute; top: 0; right: 0; width: 42%; height: 100%; z-index: 0; pointer-events: none; }
+@media (max-width: 1100px) { .particles { display: none; } }
+html[lang="en"] .particles { top: 36%; height: 64%; }  /* 英文大字較寬，S 放到大字下方 */
+@media (max-width: 1280px) { html[lang="en"] .particles { display: none; } }
 @media print { .particles { display: none; } }
 
 /* ---------- 首頁服務卡：整張是連結（.go） ---------- */
@@ -163,13 +160,34 @@ html[lang="en"] .closing h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 
 .go .plate-top { align-items: center; transition: border-color .2s; }
 .go h3 { margin-top: 20px; }
 .go .arrow { transition: transform .2s; }
-.go > a:hover .arrow, .go > a:focus-visible .arrow { transform: translateX(6px); }
+.go > a:hover .arrow, .go > a:focus-visible .arrow { transform: translateX(4px); }
 .go > a:hover .plate-top, .go > a:focus-visible .plate-top { border-bottom-color: var(--ink); }
 .go > a:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 
 /* ---------- 首頁捲動淡入（assets/reveal.js 加上 html.js 才生效） ---------- */
-.js main section .head, .js main section .plate { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
-.js main section .head.is-in, .js main section .plate.is-in { opacity: 1; transform: none; }
+/* 2026-11-27 unslop：改成每一區整塊淡入一次，不再每張卡各自飛入 */
+.js main section:not(.hero) > .wrap { opacity: 0; transform: translateY(8px); transition: opacity .4s ease-out, transform .4s ease-out; }
+.js main section:not(.hero) > .wrap.is-in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .js main section .head, .js main section .plate { opacity: 1; transform: none; transition: none; }
+  .js main section:not(.hero) > .wrap { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- 首頁「我們做三件事」：導視指引列表（2026-11-27 unslop，取代三張等寬卡片） ---------- */
+.directory { list-style: none; padding: 0; background: var(--plate); }
+.directory li + li { border-top: 1px solid var(--rule); }
+.directory a { display: grid; grid-template-columns: auto minmax(0, 5fr) minmax(0, 6fr) auto; gap: 8px 32px; align-items: start;
+  padding: clamp(24px, 3vw, 36px); color: inherit; text-decoration: none; transition: background-color .2s ease-out; }
+.directory a:hover { background: var(--white); }
+.directory a:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+.directory .box { margin-top: 2px; }
+.directory h3 { font-size: 26px; line-height: 1.4; }
+.directory .en { margin-top: 4px; }
+.directory .dir-desc { color: var(--ink-soft); padding-top: 4px; }
+.directory .arrow { margin-top: 4px; transition: transform .2s ease-out; }
+.directory a:hover .arrow, .directory a:focus-visible .arrow { transform: translateX(4px); }
+@media (max-width: 860px) {
+  .directory a { grid-template-columns: auto 1fr; gap: 12px 20px; }
+  .directory .dir-desc { grid-column: 2; padding-top: 0; }
+  .directory .arrow { display: none; }
+  .directory h3 { font-size: 22px; }
 }

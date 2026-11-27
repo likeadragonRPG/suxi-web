@@ -31,7 +31,7 @@
 <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
 <script src="./assets/reveal.js"></script>
 <link rel="stylesheet" href="./style.css">
 <script type="application/ld+json">
@@ -68,8 +68,6 @@
 </script>
 </head>
 <body>
-<canvas class="particles" aria-hidden="true"></canvas>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="a-right" viewBox="0 0 44 44"><path d="M5 22H38M24 8L38 22L24 36"/></symbol>
   <symbol id="a-up" viewBox="0 0 44 44"><path d="M22 39V6M8 20L22 6L36 20"/></symbol>
@@ -91,12 +89,13 @@
 
 <main>
   <section class="hero">
+    <canvas class="particles" aria-hidden="true"></canvas>
     <div class="wrap">
       <p class="display" aria-hidden="true"><span>進現場，</span><span>把問題做完<span class="seal" style="display:inline">。</span></span></p>
       <div class="hero-text">
         <h1>速喜科技進傳產現場，把 AI 接進正在跑的舊系統，讓它真正用起來。</h1>
-        <p class="lead">不是只交一份報告。我們人到產線，接上你現在的工單、報表、機台和舊系統，目標是讓現場每天真的用得上。</p>
-        <a class="btn" href="mailto:suxi.ai@gmail.com">帶一個產線痛點來，我們告訴你能不能做。</a>
+        <p class="lead">不是只交一份報告。從你現在的工單、報表和機台開始接，做到現場每天用得上。</p>
+        <a class="btn" href="mailto:suxi.ai@gmail.com">帶一個產線痛點來，我們告訴你能不能做</a>
         <span class="mailnote">寄信到 suxi.ai@gmail.com</span>
       </div>
     </div>
@@ -122,29 +121,38 @@
         <h2>我們做三件事<span class="seal">。</span></h2>
         <p class="en">Three things we do</p>
       </div>
-      <ul class="plates three">
-        <li class="plate svc go">
+      <ul class="directory">
+        <li>
           <a href="services/#connect">
-            <div class="plate-top"><span class="box">1</span><svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg></div>
-            <h3>把 AI 接進舊系統和機台</h3>
-            <p class="en">Connect AI to legacy systems</p>
-            <p>進現場看流程，把 AI 接到你現在的系統、Excel、工單和機台上。</p>
+            <span class="box">1</span>
+            <div class="dir-name">
+              <h3>把 AI 接進舊系統和機台</h3>
+              <p class="en">Connect AI to legacy systems</p>
+            </div>
+            <p class="dir-desc">進現場看流程，把 AI 接到你現在的系統、Excel、工單和機台上。</p>
+            <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
           </a>
         </li>
-        <li class="plate svc go">
+        <li>
           <a href="services/#local-ai">
-            <div class="plate-top"><span class="box">2</span><svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg></div>
-            <h3>部署本地 AI</h3>
-            <p class="en">Local AI</p>
-            <p>協助把模型或應用放在廠內，讓需要的資料可以留在廠內處理。</p>
+            <span class="box">2</span>
+            <div class="dir-name">
+              <h3>部署本地 AI</h3>
+              <p class="en">Local AI</p>
+            </div>
+            <p class="dir-desc">協助把模型或應用放在廠內，讓需要的資料可以留在廠內處理。</p>
+            <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
           </a>
         </li>
-        <li class="plate svc go">
+        <li>
           <a href="services/#agent">
-            <div class="plate-top"><span class="box">3</span><svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg></div>
-            <h3>打造 AI Agent 工作流</h3>
-            <p class="en">AI agent workflows</p>
-            <p>把重複的工作串成可用的流程，並保留人工檢查。</p>
+            <span class="box">3</span>
+            <div class="dir-name">
+              <h3>打造 AI Agent 工作流</h3>
+              <p class="en">AI agent workflows</p>
+            </div>
+            <p class="dir-desc">把重複的工作串成可用的流程，並保留人工檢查。</p>
+            <svg class="arrow" aria-hidden="true"><use href="#a-right"/></svg>
           </a>
         </li>
       </ul>

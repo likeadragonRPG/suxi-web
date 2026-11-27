@@ -1,5 +1,5 @@
 /* 速喜科技 — 首頁捲動淡入（只播一次）
-   在 <head> 同步載入：先在 <html> 加上 js，CSS 才會先藏起 .head 和 .plate。
+   在 <head> 同步載入：先在 <html> 加上 js，CSS 才會先藏起每一區（首屏除外）。
    沒有 JS、瀏覽器太舊、或設定「減少動態」時，什麼都不做，內容照常顯示。 */
 (() => {
   'use strict';
@@ -9,7 +9,7 @@
   root.classList.add('js');
 
   function start() {
-    const items = document.querySelectorAll('main section .head, main section .plate');
+    const items = document.querySelectorAll('main section:not(.hero) > .wrap');
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) {
         if (!e.isIntersecting) continue;
