@@ -139,8 +139,6 @@ html[lang="en"] .closing h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 
 .ticks li::before { content: ""; position: absolute; left: 0; top: 1.45em; width: 10px; height: 2px; background: var(--ink); }
 .plates.flat .plate { background: var(--plate); border: 1px solid var(--rule); }
 .sect.tight { padding-top: 0; }
-.faq li { font-size: clamp(18px, 2vw, 21px); }
-.faq li span:last-child { color: var(--ink); }
 .person { display: block; }  /* 照片拍好後再改回兩欄：120px 1fr */
 .person h3 { margin-top: 0; }
 .photo { aspect-ratio: 4 / 5; width: 100%; max-width: 100%; border: 1px dashed var(--rule); background: var(--white);
